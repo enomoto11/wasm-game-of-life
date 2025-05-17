@@ -15,6 +15,8 @@ pub fn greet(s: &str) {
     alert(&format!("Hello {}!", s));
 }
 
+// u8としているのは u8型の変数が1バイトであり、ここではenumを1バイトの値として扱いたいから
+// https://doc.rust-lang.org/reference/type-layout.html#primitive-data-layout
 #[wasm_bindgen]
 #[repr(u8)]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
